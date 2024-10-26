@@ -3,7 +3,7 @@ let total = 0;
 
 function addToCart(product, price) {
     cart.push({ product, price });
-    total += price;
+    total += price; // Tambah harga ke total
     updateCart();
     showPopup('Item added to cart!');
 }
@@ -19,8 +19,7 @@ function updateCart() {
             li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
             cartList.appendChild(li);
         });
-    
-        totalPrice.textContent = total.toFixed(2);
+        totalPrice.textContent = total.toFixed(2); // Memperbarui harga total dengan benar
     }
 }
 
@@ -29,7 +28,7 @@ function loadSection(section) {
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
-            if (section === 'cart') loadCart(); // Update cart view when loading the cart page
+            if (section === 'cart') updateCart(); // Memperbarui tampilan cart saat halaman dimuat
         })
         .catch(error => console.error('Error loading section:', error));
 }
