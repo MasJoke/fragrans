@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragrans - Your Online Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Fragrans</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav id="menu">
+            <ul>
+                <li><a href="#home" onclick="loadSection('home')">Home</a></li>
+                <li class="dropdown">
+                    <a href="#shop">Shop</a>
+                    <ul class="submenu">
+                        <li><a href="#shop" onclick="loadSection('shop')">All Products</a></li>
+                        <li><a href="#women" onclick="loadSection('women')">Perfume for Women</a></li>
+                        <li><a href="#men" onclick="loadSection('men')">Perfume for Men</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about" onclick="loadSection('about')">About</a></li>
+                <li><a href="#contact" onclick="loadSection('contact')">Contact</a></li>
+                <li><a href="#cart" onclick="loadSection('cart')">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- Content will be loaded here dynamically -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Fragrans Online Store</p>
+    </footer>
+    <!-- Popup Notification -->
+    <div id="popup" class="popup">Item added to cart!</div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
